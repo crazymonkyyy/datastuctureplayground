@@ -14,5 +14,6 @@ So roughly:
 
 1. Code I submit to the std should probaly have (mostly) complient range based iteration
 2. Have the api open to critized early and often.
-3. Have unit testing including real world speed testing.
+3. Have unit testing for correctness.
+4. Real world speed testing.
 
