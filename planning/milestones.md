@@ -1,34 +1,47 @@
-rough milestone plans
+Revised mission statement: Making 6 reasonably-general high-quality data structures that's complies with the standards of the std to submit it to the std.
+
+For this purpose high-quality means:
+
+1. Robust, given random data should not crash the program expect for asserts with a designed messages.
+2. Cache-aware, modern hardware has a counter-intuitive but known behavior, data structures willfully ignorant of the basic facts are bad; I should not be.
+3. Comfy user interface.
+4. Reasonably compliant with community standards.
+
+Data structure summery(details in separate files):
+---
+
+1. Ring array: an array with an access pattern that loops back on itself rather then overflowing
+2. Opinionated list of lists: A array of nullable!T, where null is an end of a list.
+3. Metadata: like nullable, but adds additional 7 bit int to round out the wasted space of nullable, and more flexible in usage pattern.
+4. Member index arrays: A lighter version of SoA. Given a user defined T and a member of T, packs the designated members together for better cache usage for searches. Highly experimental.
+5. Fixed length string: When you want char[n] rather then the default char[].
+6. Semi-static array: no gc, copy to larger array during overflow and custom allocator friendly array abstraction.
 
 Month 1
------
+----
 
-1. Make a framework for robustness testing data structures(intended to be good)
-  - indentity test
-  - sorting
-  - deletion and counting
-2. Clean up ring array signifigently, with unit tests
-3. Get "metadata" prototype working that will serve my needs  
-4. Get a working prototype of opinatented list of list
-  - maybe intergate it with my connected compoint lib
-5. Get a seperate frame work for speed testing, racing vs cashe-naive comparisions (intented to grab numbers for documation and to be slipshod, disposable)
+* Get a dub package up and running
+* Drastically improve ring arrays
+* Make a *bodged* "race" testing framework that generates documentation
+* Get working reasonable quality prototypes for the other 5 data structures
+* Learn d style and inline documentation systems, probably adding it to ring array
 
 Month 2
-------
+---
 
-1. Begin trying to push for getting ring array into std experimental and doubtlessly learning the "d style" the hard way. Hopefully succed.
-2. Make semi-static arrays prototype paying attension to the pro-"allocator" side of the "debate"
-  - it seems I'm signifigently out numbered; concessions will likely be made.
-3. Get meta data and opinated list of list, cleaned up, incuding the semi-static array intergation.
+* Make/find a more robust testing system
+* Create some sort of system for feedback that isn't std.expermental
+* Improve 3 more data structures for feedback.
 
 Month 3
-----
+---
 
-1. Heavily test semi-static array and list of lists when using semistatic array
-2. If everything is going well get semi-static arrays, meta-data, and opinated list of lists in std.experimental if not just the std.
-3. If its not going well, panic and fix whatevers on fire.
+* Improve remaining data structures.
+* Finalize api and code for ring array.
+* Respond to feedback.
 
 Month 4
-----
+---
 
-1. Play it by ear. If the std was friendlier then I thought, push more data structures that I have made for myself by this point. Other wise obey the cruel demands of the offical style guide and whatever politics. 
+* Finalize remaining data structures to my own standards.
+* Submit code to the std review process.

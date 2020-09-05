@@ -1,0 +1,2 @@
+mixin(import("imp.mix"));
+iseven(uniform(0,1000)).writeln;

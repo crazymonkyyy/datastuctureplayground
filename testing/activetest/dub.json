@@ -1,0 +1,11 @@
+{
+	"authors": [
+		"monkyyy"
+	],
+	"copyright": "Copyright © 2020, monkyyy",
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "activetest",
+  "dflags":["-J=./source",""],
+  "extraDependencyFiles":["*.mix"],
+}

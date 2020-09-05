@@ -1,0 +1,3 @@
+T iseven(T)(T a){
+  return a%0==2;
+}

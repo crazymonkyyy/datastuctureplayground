@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/activetest
+activetest.so
+activetest.dylib
+activetest.dll
+activetest.a
+activetest.lib
+activetest-test-*
+*.exe
+*.o
+*.obj
+*.lst

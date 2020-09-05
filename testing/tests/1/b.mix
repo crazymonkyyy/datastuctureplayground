@@ -1,0 +1,9 @@
+T iseven(T)(T a){
+  import std.math;
+  a= a.abs;
+  bool out_;
+  for(i;0..a){
+    out_= !out_;
+  }
+  return out_;
+}
