@@ -26,7 +26,8 @@ struct usertype{
   size_t id;
   vect2 pos;
   color c;
-}```
+}
+```
 
 This would in turn be used to make a type like:
 
@@ -34,7 +35,8 @@ This would in turn be used to make a type like:
 struct modifiedusertype{
   vect2 pos;
   color c;
-}```
+}
+```
 
 And would be used to make the data format of 
 
@@ -42,7 +44,8 @@ And would be used to make the data format of
 struct list(usertype, id){
   typeof(usertype.id)[] keys;
   modifiedusertype[] values;
-}```
+}
+```
 
 To make a "light" soa system that maybe more general users could be convinced to use.
 
